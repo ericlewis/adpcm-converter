@@ -1,0 +1,23 @@
+{
+  "name": "adpcm-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "adpcm-convert": "node ./node_bin/adpcm-convert",
+    "build": "emcc adpcm-wasm/adpcm.c adpcm-xq/adpcm-lib.c -lnodefs.js -sMODULARIZE -sASYNCIFY -sFORCE_FILESYSTEM=1 -sEXPORTED_RUNTIME_METHODS=allocateUTF8 -sNODERAWFS -o adpcm-wasm/index.js"
+  },
+  "engines" : { 
+    "node" : ">=14.0.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@ffmpeg/core": "^0.10.0",
+    "@ffmpeg/ffmpeg": "^0.10.1",
+    "yargs": "^17.4.0"
+  },
+  "bin": {
+    "adpcm-convert": "./index.js"
+  }
+}

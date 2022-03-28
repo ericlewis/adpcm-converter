@@ -1,0 +1,3 @@
+[submodule "adpcm-xq"]
+	path = adpcm-xq
+	url = https://github.com/dbry/adpcm-xq
